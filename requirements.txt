@@ -1,0 +1,4 @@
+# Specific versions shouldn't really matter for the below libraries for now,
+# just fetch the latest / automatically determined versions.
+datasets
+pyarrow
