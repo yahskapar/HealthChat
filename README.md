@@ -73,7 +73,12 @@ This output directory will contain:
 
 If you use the HealthChat dataset or the code in this toolbox for your research, please cite our work.
 ```bibtex
-TBA
+@article{paruchuri2025s,
+  title={" What's Up, Doc?": Analyzing How Users Seek Health Information in Large-Scale Conversational AI Datasets},
+  author={Paruchuri, Akshay and Aziz, Maryam and Vartak, Rohit and Ali, Ayman and Uchehara, Best and Liu, Xin and Chatterjee, Ishan and Agrawal, Monica},
+  journal={arXiv preprint arXiv:2506.21532},
+  year={2025}
+}
 ```
 
 ## ⚖️ Licensing
