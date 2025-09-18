@@ -19,8 +19,11 @@ from datasets import load_dataset
 from datetime import datetime
 
 # --- Configuration ---
-# Accepted versions ["1.0.0"]
-DATASET_VERSION = "1.0.0"
+# Accepted versions ["1.0.0", "2.0.0"]
+# 1.0.0 corresponds to annotations using Gemini 1.5 Pro and an older taxonomy (V5)
+# 2.0.0 is the latest version that uses Gemini 2.5 Pro for annotations and a newer taxonomy (V6)
+# which corresponds to the EMNLP 2025 Findings paper here: https://arxiv.org/abs/2506.21532
+DATASET_VERSION = "2.0.0"
 
 # A dedicated output directory for all generated files
 OUTPUT_DIR = f'HealthChat-11K_v{DATASET_VERSION}_artifacts'
