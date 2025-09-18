@@ -7,14 +7,15 @@
 
 # <img src="./figures/title_icon.png" alt="HealthChat Icon" width="25" /> HealthChat-11K
 
-This repository contains the official code to reconstruct **HealthChat-11K**, a curated dataset of approx. 11,000 real-world conversations where users seek healthcare information from Large Language Models (LLMs). The goal of this work is to provide a high-quality resource for systematically studying and improving health conversations involving humans and AI (e.g., LLMs). **HealthChat-11K** corresponds to an arXiv paper - ["What's Up, Doc?": Analyzing How Users Seek Health Information in Large-Scale Conversational AI Datasets](https://arxiv.org/abs/2506.21532).
+This repository contains the official code to reconstruct **HealthChat-11K**, a curated dataset of approx. 11,000 real-world conversations where users seek healthcare information from Large Language Models (LLMs). The goal of this work is to provide a high-quality resource for systematically studying and improving health conversations involving humans and AI (e.g., LLMs). **HealthChat-11K** corresponds to an EMNLP 2025 Findings paper - ["What's Up, Doc?": Analyzing How Users Seek Health Information in Large-Scale Conversational AI Datasets](https://arxiv.org/abs/2506.21532).
 
 This codebase fetches conversational data from large-scale source datasets and merges it with our detailed annotations to produce the final, ready-to-use dataset.
 
 ## 📝 Project Status
 
 - [x] Release `v1.0.0` of the master annotations and dataset artifacts generation script.
-- [ ] Complete additional, minor taxonomy revisions and update master annotations.
+- [x] Complete additional, minor taxonomy revisions and update master annotations.
+- [x] Release `v2.0.0` of the master annotations and dataset artifacts generation script.
 
 ## 🗂️ Dataset Composition
 
@@ -27,7 +28,7 @@ The final dataset is a composition of three parts: two large-scale source datase
 2.  **HealthChat Annotations (Our Contribution):** We provide a master annotation file containing our core analysis, including a clinician-driven taxonomy, specialty classifications, and sycophancy analysis. This file is hosted on the Hugging Face Hub:
     * [yahskapar/HealthChat-11K](https://huggingface.co/datasets/yahskapar/HealthChat-11K)
 
-3.  **Final Dataset (The Output):** The script in this repo uses our annotations file to pull the correct conversations from the source datasets and generate the final, merged `HealthChat-11K_v1.0.0.jsonl` file.
+3.  **Final Dataset (The Output):** The script in this repo uses our annotations file to pull the correct conversations from the source datasets and generate the final, merged `HealthChat-11K_v2.0.0.jsonl` file.
 
 ## 🔧 Setup
 
@@ -59,15 +60,15 @@ python generate_artifacts.py
 ```
 
 This will perform the following steps:
-1.  Download the master annotation file (`v1.0.0`) from the Hugging Face Hub.
+1.  Download the master annotation file (`v2.0.0`) from the Hugging Face Hub.
 2.  Stream the source datasets (`lmsys-chat-1m` and `WildChat-1M`) to find the required conversations.
 3.  Merge the source data with the annotations.
-4.  Save all generated files into a new directory named **`HealthChat-11K_v1.0.0_artifacts/`**.
+4.  Save all generated files into a new directory named **`HealthChat-11K_v2.0.0_artifacts/`**.
 
 This output directory will contain:
-* `HealthChat-11K_v1.0.0.jsonl`: The final, complete dataset.
-* `HealthChat-11K_v1.0.0_full_review.csv`: A CSV with every conversation turn for review.
-* `HealthChat-11K_v1.0.0_sycophancy_review.csv`: A CSV with leading questions seeking treatment (LQST) annotations marked for review.
+* `HealthChat-11K_v2.0.0.jsonl`: The final, complete dataset.
+* `HealthChat-11K_v2.0.0_full_review.csv`: A CSV with every conversation turn for review.
+* `HealthChat-11K_v2.0.0_sycophancy_review.csv`: A CSV with leading questions seeking treatment (LQST) annotations marked for review.
 
 ## 📜 Citation
 
