@@ -84,7 +84,7 @@ If you use the HealthChat dataset or the code in this toolbox for your research,
 
 ## ⚖️ Licensing
 
-This project uses a dual-license model. Please read carefully.
+This project uses a dual-license model. Please read carefully and also keep in mind the underlying licenses for source datasets such as WildChat and LMSYS.
 
 * **Code:** All source code in this repository (e.g., `generate_artifacts.py`, `setup.sh`) is licensed under the **MIT License**.
 
