@@ -29,7 +29,7 @@ The final dataset is a composition of three parts: two large-scale source datase
 2.  **HealthChat Annotations (Our Contribution):** We provide a master annotation file containing our core analysis, including a clinician-driven taxonomy, specialty classifications, and sycophancy analysis. This file is hosted on the Hugging Face Hub:
     * [yahskapar/HealthChat-11K](https://huggingface.co/datasets/yahskapar/HealthChat-11K)
 
-3.  **Final Dataset (The Output):** The script in this repo uses our annotations file to pull the correct conversations from the source datasets and generate the final, merged `HealthChat-11K_v2.0.0.jsonl` file.
+3.  **Final Dataset (The Output):** The script in this repo uses our annotations file to pull the correct conversations from the source datasets and generate the final, merged `HealthChat-11K_v2.1.0.jsonl` file.
 
 ## 🔧 Setup
 
@@ -61,15 +61,15 @@ python generate_artifacts.py
 ```
 
 This will perform the following steps:
-1.  Download the master annotation file (`v2.0.0`) from the Hugging Face Hub.
+1.  Download the master annotation file (`v2.1.0`) from the Hugging Face Hub.
 2.  Stream the source datasets (`lmsys-chat-1m` and `WildChat-1M`) to find the required conversations.
 3.  Merge the source data with the annotations.
-4.  Save all generated files into a new directory named **`HealthChat-11K_v2.0.0_artifacts/`**.
+4.  Save all generated files into a new directory named **`HealthChat-11K_v2.1.0_artifacts/`**.
 
 This output directory will contain:
-* `HealthChat-11K_v2.0.0.jsonl`: The final, complete dataset.
-* `HealthChat-11K_v2.0.0_full_review.csv`: A CSV with every conversation turn for review.
-* `HealthChat-11K_v2.0.0_sycophancy_review.csv`: A CSV with leading questions seeking treatment (LQST) annotations marked for review.
+* `HealthChat-11K_v2.1.0.jsonl`: The final, complete dataset.
+* `HealthChat-11K_v2.1.0_full_review.csv`: A CSV with every conversation turn for review.
+* `HealthChat-11K_v2.1.0_sycophancy_review.csv`: A CSV with leading questions seeking treatment (LQST) annotations marked for review.
 
 ## 📜 Citation
 
