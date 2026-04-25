@@ -1,0 +1,4 @@
+# Generated dataset artifacts — reconstructed locally by generate_artifacts.py.
+# These are NEVER committed: the repo's design is to regenerate them from the
+# HF master annotations + upstream source datasets, not to redistribute them.
+HealthChat-11K_v*_artifacts/

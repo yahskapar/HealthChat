@@ -16,6 +16,7 @@ This codebase fetches conversational data from large-scale source datasets and m
 - [x] Release `v1.0.0` of the master annotations and dataset artifacts generation script.
 - [x] Complete additional, minor taxonomy revisions and update master annotations.
 - [x] Release `v2.0.0` of the master annotations and dataset artifacts generation script.
+- [x] Release `v2.1.0` — dual-license-by-upstream-source reissue (same data and schema as `v2.0.0`; only license metadata changed). See [Licensing](#-licensing) for details.
 
 ## 🗂️ Dataset Composition
 
@@ -84,8 +85,14 @@ If you use the HealthChat dataset or the code in this toolbox for your research,
 
 ## ⚖️ Licensing
 
-This project uses a dual-license model. Please read carefully and also keep in mind the underlying licenses for source datasets such as WildChat and LMSYS.
+Starting with `v2.1.0`, the dataset is **dual-licensed by upstream source**. Each subset inherits the terms of its upstream corpus — no new restrictive prose has been added. Downstream users can filter by the existing `dataset_source` field to select the subset that matches their use case.
 
 * **Code:** All source code in this repository (e.g., `generate_artifacts.py`, `setup.sh`) is licensed under the **MIT License**.
 
-* **Data Annotations:** The annotation data, hosted on the [Hugging Face Hub](https://huggingface.co/datasets/yahskapar/HealthChat-11K), is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License**.
+* **Data Annotations — LMSYS-derived subset** (`dataset_source == "lmsys"`, ~61.8% of conversations / 6,780 conversations): Licensed under the **[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)** License. The non-commercial restriction is inherited from [LMSYS-Chat-1M's upstream terms](https://huggingface.co/datasets/lmsys/lmsys-chat-1m); commercial use is **not** permitted on this subset.
+
+* **Data Annotations — WildChat-derived subset** (`dataset_source == "wildchat"`, ~38.2% of conversations / 4,185 conversations): Licensed under the **[Open Data Commons Attribution License 1.0 (ODC-BY 1.0)](https://opendatacommons.org/licenses/by/1-0/)**, matching [WildChat-1M's upstream license](https://huggingface.co/datasets/allenai/WildChat-1M) (relicensed by AI2 from the prior ImpACT terms on 2024-06-26, retroactive). Commercial use **is** permitted with attribution.
+
+**Attribution:** When using either subset, please cite the HealthChat-11K paper (see [Citation](#-citation)) and the applicable upstream dataset (LMSYS-Chat-1M and/or WildChat-1M).
+
+Users are responsible for independently complying with each upstream dataset's terms in addition to the annotation license above.
